@@ -8,7 +8,7 @@
 # Add a feed source
 #sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
-# Import external feeds
+
 src-git luci_theme_argon https://github.com/jerrykuku/luci-theme-argon.git
 src-git luci_app_argon_config https://github.com/jerrykuku/luci-app-argon-config.git
 src-git istore https://github.com/linkease/istore;main
