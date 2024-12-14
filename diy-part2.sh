@@ -22,3 +22,10 @@ sed -i "s/'UTC'/'CST-8'/g" package/base-files/files/bin/config_generate
 # 在时区设置后添加区域名称设置
 sed -i "/set system.\@system\[-1\].timezone='CST-8'/a\ \ \ \ set system.\@system\[-1\].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
+# Step 5: 修改默认NTP服务器地址
+sed -i "s/0.openwrt.pool.ntp.org/ntp.aliyun.com/g" package/base-files/files/etc/config/system
+sed -i "s/1.openwrt.pool.ntp.org/time5.cloud.tencent.com/g" package/base-files/files/etc/config/system
+sed -i "s/2.openwrt.pool.ntp.org/ntp.tuna.tsinghua.edu.cn/g" package/base-files/files/etc/config/system
+sed -i "s/3.openwrt.pool.ntp.org/ntp.ntsc.ac.cn/g" package/base-files/files/etc/config/system
+
+
